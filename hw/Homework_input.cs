@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Intrinsics.X86;
 
 namespace Homework_input
 {
@@ -15,16 +16,53 @@ namespace Homework_input
             Calculate and print body-mass index (BMI)
             Do 1 and 2 for another person.
             */
+            double weight;
+            double height;
+            double BMI;
 
-            ReceiveData();
+            (weight, height) = ReceiveData();
+            BMI = CalculateBMI(weight, height);
+            Console.WriteLine($"His BMI is {BMI:F1}");
+            
         }
 
-        static string ReceiveData()
+        static (double weight, double height) ReceiveData()
         {
-            string data ="q";
+            string name;
+            string surname;
+            int age;
+            double weight;
+            double height;
 
-            return data;
+            Console.WriteLine("Please introduce your Name: ");
+            name = Console.ReadLine()?? "0";
+
+            Console.WriteLine("Please introduce your Surname: ");
+            surname = Console.ReadLine()?? "0";
+
+            Console.WriteLine("Please introduce your age: ");
+            age = int.Parse(Console.ReadLine()?? "0");
+
+            Console.WriteLine("Please introduce your Weight in kg: ");
+            weight = double.Parse(Console.ReadLine()?? "0");
+
+            Console.WriteLine("Please introduce your height in cm: ");
+            height = double.Parse(Console.ReadLine()?? "0");
+
+            Console.WriteLine($"{name} {surname} is {age} years old, his weight is {weight}kg and his height is {height}cm");
+
+            return (weight, height);
 
         }
+
+        static double CalculateBMI(double weight, double height)
+        {
+            double calculation;
+
+            calculation = (weight / (height*height))*10000;
+
+            return calculation;
+        }
+    
     }
 }
