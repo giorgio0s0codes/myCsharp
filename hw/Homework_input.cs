@@ -21,7 +21,9 @@ namespace Homework_input
 
         static string ReceiveData()
         {
-            string data;
+            string data ="q";
+
+            return data;
 
         }
     }

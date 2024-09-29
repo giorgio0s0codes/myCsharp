@@ -1,5 +1,4 @@
-myCsharp.sln
-C#.sln
+*.sln
 # Build Folders
 bin/
 obj/
