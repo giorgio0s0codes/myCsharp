@@ -1,1 +1,1 @@
-This a repository designed for me to learn C# and the management of GitHub
+This a repository designed for me to learn C# and the management of GitHub.
