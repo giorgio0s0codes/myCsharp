@@ -1,0 +1,25 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Visual Studio Code
+.vscode/
+
+# DotNet temporary files
+*.pdb
+*.mdb
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+
+# Temporary files
+*.tmp
+*.log
+
+# Environment variables
+.env
+.DS_Store

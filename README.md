@@ -1,1 +1,1 @@
-Hola esto es una prueba# myCsharp
+This a repository designed for me to learn C# and the management of GitHub
